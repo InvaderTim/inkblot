@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'language_list'
+gem "carrierwave"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

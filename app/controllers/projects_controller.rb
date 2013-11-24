@@ -22,7 +22,7 @@ def edit
 end
 def update
 	@project = Project.find(params[:id])
-	if @project.update(params[:project].permit(:title, :text, :genre, :rating, :language))
+	if @project.update(params[:project].permit(:title, :text, :genre, :rating, :language, :image))
 		redirect_to @project
 		else
 			render 'edit'
@@ -31,8 +31,9 @@ def update
 
   private
   def project_params
-  	params.require(:project).permit(:title, :text, :genre, :rating, :language)
+  	params.require(:project).permit(:title, :text, :genre, :rating, :language, :image)
   	
   end
+
 
 end

@@ -7,4 +7,7 @@ class Project < ActiveRecord::Base
   end
   validates :title, presence: true, length: { minimum: 1}
   validates :text, presence: true, length: {minimum: 1}
+
+  mount_uploader :image, CoverartUploader
+
 end
