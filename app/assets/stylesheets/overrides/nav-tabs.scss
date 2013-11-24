@@ -1,0 +1,17 @@
+.nav-tabs {
+ li {
+    a, a:hover {
+      border: none;
+      border-radius: 0;
+      background-color: white;
+    }
+  }
+  li.active {
+    a, a:hover {
+      border: none;
+      border-radius: 0;
+      background-color: $purple;
+      color: white;
+    }
+  }
+}
