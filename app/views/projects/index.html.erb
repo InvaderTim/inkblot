@@ -1,0 +1,8 @@
+<div id="posts">
+<%= link_to "New Project", new_project_path %>
+
+<h1>All Stories</h1>
+<% @projects.each do |project| %>
+<h3><%= link_to project.title, project_path(project) %></h3>
+<% end %>
+</div>
