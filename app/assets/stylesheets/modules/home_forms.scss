@@ -2,34 +2,55 @@
   // border: 1px solid #dddddd;
   padding: 0px;
 
+  #form-logo {
+    padding-bottom: 35px;
+  }
+
+  .vertical-center {
+    padding-top: 100px;
+  }
+
+  label {
+    font-weight: normal;
+  }
+
+  .nav-tabs a, .btn {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .nav-tabs .active a {
+    color: #64EE00;
+  }
+
   .tab-content {
-    border: 1px solid $purple;
+    .row {
+      margin-top: 10px;
+    }
 
     .field {
-      height: 44px;
-      width: 100%;
+      height: 40px;
 
-      border-bottom: 1px solid $purple;
+      div {
+        display: inherit;
+      }
 
-      * {
+      .input {
         border: 0px;
         border-radius: 0px;
-        background-color: white;
+        background-color: #e6e6e6;
+        width: 100%;
+        height: 100%;
       }
 
       // margin-top: 5px;
 
       &.solid {
-        * {
+        *.input {
           background-color: $purple;
           color: white;
 
         }
-        border-bottom: 1px solid white;
-      }
-
-      label {
-        font-weight: normal;
       }
     }
   }
