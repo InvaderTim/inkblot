@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+  mount_uploader :profile_image, ProfileImageUploader
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
