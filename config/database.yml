@@ -19,3 +19,13 @@ test: &test
   pool: 5
   host: localhost
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: da89tvdfiqa62c
+  username: jpwdrghapgzgze
+  password: 5AVzt5uphbGXjL8jnDEYBjyXAr
+  pool: 5
+  host: ec2-54-204-35-114.compute-1.amazonaws.com
+  port: 5432
+
