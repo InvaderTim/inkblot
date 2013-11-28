@@ -1,32 +1,12 @@
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-content">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-tint"></span> Inkblot</a>
-  </div>
-
-  <div class="collapse navbar-collapse" id="navigation-content">
-    <ul class="nav navbar-nav">
-    </ul>
-    <%- if user_signed_in? %>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <span class="navbar-text">
-            Signed in as <%= link_to current_user.email, edit_user_registration_path, class: "navbar-link" %>
-          </span>&nbsp;
-        </li>
-      </ul>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn navbar-right" %>
-    <%- else %>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    <%- end %>
-  </div>
-</nav>
-<% if user_signed_in? %>
-
-<% end %>
+<div>
+  <ul class="nav nav-pills nav-stacked">
+    <li>
+      <%= image_tag current_user.profile_image_url, class: "circle-image", id: "profile-image" %>
+    </li>
+    <%= nav_link("MY WRITING", "#") %>
+    <%= nav_link "FRIENDS", "#" %>
+    <%= nav_link "BOOKSHELF", "#" %>
+    <%= nav_link "ACCOUNT", edit_user_registration_path %>
+    <%= nav_link "LOGOUT", destroy_user_session_path, method: :delete %>
+  </ul>
+</div>

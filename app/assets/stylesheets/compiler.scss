@@ -4,8 +4,19 @@
 @import "overrides/nav-tabs";
 
 // Modules (AKA Pages)
+@import "modules/forms";
 @import "modules/home_forms";
+@import "modules/navigation";
 
 body {
   background-image: url(asset_path('bgtilelight.png'));
+}
+
+#global-header-row {
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $purple;
 }

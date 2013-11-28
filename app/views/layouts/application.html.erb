@@ -9,12 +9,29 @@
 </head>
 <body>
 
-<%= render "shared/navigation" if user_signed_in? %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <% if user_signed_in? %>
+    <div class="row" id="global-header-row">
+      <p class="text-center">
+        <embed src="<%= asset_path("inkblotlogoheader.svg") %>" width="100" height="120"/>
+      </p>
+    </div>
+    <div class="row" id="global-content-row">
+      <div id="global-navigation" class="col-md-3">
+        <%= render "shared/navigation" if user_signed_in? %>
+      </div>
 
-<div class="container">
-  <%= bootstrap_flash %>
+      <div id="global-content" class="col-md-8 col-md-offset-1">
+    <% end %>
+        <%= bootstrap_flash %>
 
-  <%= yield %>
+        <%= yield %>
+    <% if user_signed_in? %>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
 
 </body>
